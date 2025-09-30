@@ -4,45 +4,48 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ParKar — Find your car</title>
-<meta name="description" content="Save where you parked and get back to your car with GPS in seconds. ParKar keeps it simple.">
+<meta name="description" content="Save where you parked and get back to your car with GPS in seconds.">
 <link rel="canonical" href="https://turbodario.github.io/parkar-site/">
+<link rel="alternate" hreflang="en" href="https://turbodario.github.io/parkar-site/">
+<link rel="alternate" hreflang="es" href="https://turbodario.github.io/parkar-site/es/">
 <link rel="stylesheet" href="styles.css">
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="ParKar — Find your car">
-<meta property="og:description" content="Save where you parked and navigate back with GPS in seconds.">
+<meta property="og:description" content="Save where you parked and get back to your car with GPS in seconds.">
 <meta property="og:url" content="https://turbodario.github.io/parkar-site/">
 <meta property="og:image" content="https://turbodario.github.io/parkar-site/og-image.png">
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ParKar — Find your car">
-<meta name="twitter:description" content="Save where you parked and navigate back with GPS in seconds.">
+<meta name="twitter:description" content="Save where you parked and get back to your car with GPS in seconds.">
 <meta name="twitter:image" content="https://turbodario.github.io/parkar-site/og-image.png">
-<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
+  "@type": "MobileApplication",
   "name": "ParKar",
-  "applicationCategory": "MobileApplication",
   "operatingSystem": "Android",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "EUR"
-  },
+  "applicationCategory": "UtilitiesApplication",
   "description": "Save your parking location and get back to your car with GPS.",
+  "inLanguage": "en",
   "url": "https://turbodario.github.io/parkar-site/",
   "downloadUrl": "https://play.google.com/store/apps/details?id=com.turbomonguerdev.parkar",
-  "screenshot": [
-    "https://turbodario.github.io/parkar-site/screen1.png",
-    "https://turbodario.github.io/parkar-site/screen2.png",
-    "https://turbodario.github.io/parkar-site/screen3.png"
-  ],
   "author": {
+    "@type": "Person",
+    "name": "Darío Díaz Guirado"
+  },
+  "publisher": {
     "@type": "Organization",
     "name": "TurbomonguerDev"
-  }
+  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+34 633 708 982",
+      "contactType": "customer support",
+      "email": "turbomonguer.dev@gmail.com",
+      "areaServed": "ES"
+    }
+  ]
 }
 </script>
 </head>
@@ -50,21 +53,27 @@
 <body>
 <div class="container">
   <nav class="nav">
-    <a href="index.html"><strong>ParKar</strong></a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="support.html">Support</a>
+    <div class="nav-left">
+      <a href="index.html"><strong>ParKar</strong></a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </div>
+    <div class="lang">
+      <a class="active" href="../">EN</a>
+      <a href="es/">ES</a>
+    </div>
   </nav>
 
   <section class="hero">
     <div class="card">
-      <h1>ParKar: find your car in seconds</h1>
-      <p>Save your parking location with one tap and navigate back with GPS. Perfect for concerts, malls, festivals and airports.</p>
+      <h1>Find your car in seconds</h1>
+      <p>Save your parking spot with one tap and navigate back with GPS. Simple, fast and reliable for concerts, malls, festivals and airports.</p>
       <ul>
-        <li>One-tap parking save</li>
+        <li>One‑tap save and clear parking notes</li>
         <li>Turn‑by‑turn navigation back to your car</li>
-        <li>Parking notes and reminders</li>
-        <li>Share your car location</li>
+        <li>Reminders so you don’t forget the level or bay</li>
+        <li>Share your car location with friends</li>
       </ul>
       <div class="badges">
         <a class="btn" href="https://play.google.com/store/apps/details?id=com.turbomonguerdev.parkar">Get it on Google Play</a>
@@ -78,7 +87,17 @@
         <div>Screenshot 2</div>
         <div>Screenshot 3</div>
       </div>
-      <p class="hint">Replace placeholders with real 1080×2280 PNGs named <kbd>screen1.png</kbd>, <kbd>screen2.png</kbd>, <kbd>screen3.png</kbd>.</p>
+      <p class="hint">Replace with real 1080×2280 PNGs named <kbd>screen1.png</kbd>, <kbd>screen2.png</kbd>, <kbd>screen3.png</kbd>.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Why ParKar</h2>
+    <div class="info-list">
+      <div><strong>Fast</strong><br>Save and find your spot in two taps.</div>
+      <div><strong>Clear</strong><br>Notes and reminders for floor, gate or timer.</div>
+      <div><strong>Private</strong><br>Data stays on your device. You’re in control.</div>
+      <div><strong>Lightweight</strong><br>Low battery and storage footprint.</div>
     </div>
   </section>
 

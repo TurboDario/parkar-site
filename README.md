@@ -1,46 +1,35 @@
 # ParKar landing (GitHub Pages)
 
-Production‑ready static landing for ParKar. Deployed via **GitHub Pages** at **https://turbodario.github.io/parkar-site/**.
+Bilingual static site (EN/ES) for **ParKar** at **https://turbodario.github.io/parkar-site/**.
 
-## Quick start
+## Deploy
 
-1. **Clone or create** this repository: `parkar-site` under your `TurboDario` account.
-2. Copy the contents of this folder to the repo root (or unzip the release if provided).
-3. Commit and push to the `main` branch.
-4. Enable Pages: go to **Settings → Pages** and set **Source** to “Deploy from branch”, **Branch** to `main`, **Folder** to `/root`.
-5. Visit **https://turbodario.github.io/parkar-site/** once the build completes.
+1. Create the repo **parkar-site** under **TurboDario** (or use the existing one).
+2. Copy these files to the repo root and push to the `main` branch.
+3. Enable GitHub Pages: **Settings → Pages** → Source **Deploy from branch**, Branch **main**, Folder **/**.
+4. Your site will be available at **https://turbodario.github.io/parkar-site/**.
 
 ## Customize
 
-- Replace placeholder screenshots with real images:
-  - `screen1.png`, `screen2.png`, `screen3.png` at repo root (1080×2280 recommended)
-- Replace `og-image.png` with a 1200×630 promo image and keep the same filename (or update the meta tag in `index.html`).
-- Update `SUPPORT_EMAIL` in the HTML if you use a different address.
-- Edit copy in `index.html`, `privacy.html`, `terms.html`, `support.html` as needed.
+- Replace placeholder screenshots with real 1080×2280 PNGs named `screen1.png`, `screen2.png`, `screen3.png` at repo root.
+- Replace `og-image.png` with a 1200×630 promo image (update `<meta>` if you change the filename).
+- Update contact info in `support.html` and `es/support.html` if you change phone or email.
 
-## SEO & metadata
+## Google Play Console
 
-- **Open Graph** and **Twitter Cards** are set up in every page.
-- **JSON‑LD** (`SoftwareApplication`) is embedded in each page to describe the app.
-- `robots.txt` and `sitemap.xml` are included and reference `https://turbodario.github.io/parkar-site/`.
+In **Store presence → Main store listing** for your app:
+- **Developer website**: `https://turbodario.github.io/parkar-site/`
+- **Privacy policy**: `https://turbodario.github.io/parkar-site/privacy.html` (you may also add the Spanish version at `https://turbodario.github.io/parkar-site/es/privacy.html`)
+- **Support email**: `turbomonguer.dev@gmail.com`
+- **Support phone**: `+34 633 708 982`
 
-## Link this site in Google Play Console
+## SEO
 
-In your app listing:
-- Store presence → Main store listing:
-  - **Developer website**: `https://turbodario.github.io/parkar-site/`
-  - **Privacy policy**: `https://turbodario.github.io/parkar-site/privacy.html`
-  - **Support email**: the same used here
-- Save and submit for review.
+- Each page includes Open Graph, Twitter Cards, and JSON‑LD (`MobileApplication`), plus `robots.txt` and `sitemap.xml`.
+- `hreflang` and language switch links for EN and ES.
 
-## UTM tracking (optional)
+## Local preview
 
-Append UTM parameters when linking to Google Play to identify traffic sources, e.g.:  
-`https://play.google.com/store/apps/details?id=com.turbomonguerdev.parkar?utm_source=youtube&utm_medium=video&utm_campaign=launch`
-
-## Local development
-
-This is a plain static site. Use any local server to preview, for example:
 ```bash
 python3 -m http.server 8080
 # open http://localhost:8080
@@ -48,4 +37,4 @@ python3 -m http.server 8080
 
 ## License
 
-The site content is © 2025 TurbomonguerDev. Styles may be reused freely for your app landing.
+© 2025 TurbomonguerDev. Content may be adapted for your app.
