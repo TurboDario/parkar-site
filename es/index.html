@@ -22,14 +22,14 @@
     </div>
   </nav>
   <section class="hero">
-    <div class="card">
+    <div class="card main-card">
       <h1>Encuentra tu coche en segundos</h1>
-      <p>Guarda tu plaza de aparcamiento con un toque y navega de vuelta con GPS. Rápido y fiable para conciertos, centros comerciales, festivales y aeropuertos.</p>
+      <p>Guarda tu plaza de aparcamiento con un toque y navega de vuelta con GPS. Perfecto para conciertos, centros comerciales, festivales y aeropuertos.</p>
       <ul>
         <li>Guardado en un toque y notas claras</li>
         <li>Navegación paso a paso hasta tu coche</li>
         <li>Recordatorios para planta, zona o tiempo</li>
-        <li>Comparte la ubicación de tu coche</li>
+        <li>Comparte la ubicación de tu coche con amigos</li>
       </ul>
       <div class="badges">
         <a class="btn" href="https://play.google.com/store/apps/details?id=com.turbomonguerdev.parkar">Descargar en Google Play</a>
@@ -37,16 +37,55 @@
       </div>
       <p class="hint">Funciona en Android 8.0+. Última actualización: 2025-09-30.</p>
     </div>
-    
-    <div class="card">
+    <div class="card shots-card">
       <div class="shots">
-        <img src="screen1.png" alt="ParKar screenshot 1">
-        <img src="screen2.png" alt="ParKar screenshot 2">
-        <img src="screen3.png" alt="ParKar screenshot 3">
+        <img src="../screen1.png" alt="ParKar captura 1" class="screenshot">
+        <img src="../screen2.png" alt="ParKar captura 2" class="screenshot">
+        <img src="../screen3.png" alt="ParKar captura 3" class="screenshot">
       </div>
       <p class="hint">Capturas de la app</p>
     </div>
   </section>
+
+  <section class="card info-card">
+    <h2>Por qué ParKar</h2>
+    <div class="info-list">
+      <div><strong>Rápida</strong><br>Guarda y encuentra en dos toques.</div>
+      <div><strong>Clara</strong><br>Notas y recordatorios para planta, puerta o tiempo.</div>
+      <div><strong>Privada</strong><br>Los datos se guardan en tu dispositivo.</div>
+      <div><strong>Ligera</strong><br>Bajo consumo de batería y almacenamiento.</div>
+    </div>
+  </section>
 </div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox hidden">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" alt="Captura ampliada">
+</div>
+
+<script>
+  // Lightbox functionality
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+
+  document.querySelectorAll('.screenshot').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.remove('hidden');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.add('hidden');
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.add('hidden');
+    }
+  });
+</script>
 </body>
 </html>

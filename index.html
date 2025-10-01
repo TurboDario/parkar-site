@@ -22,7 +22,7 @@
     </div>
   </nav>
   <section class="hero">
-    <div class="card">
+    <div class="card main-card">
       <h1>Find your car in seconds</h1>
       <p>Save your parking spot with one tap and navigate back with GPS. Perfect for concerts, malls, festivals and airports.</p>
       <ul>
@@ -37,16 +37,55 @@
       </div>
       <p class="hint">Works on Android 8.0+. Last updated: 2025-09-30.</p>
     </div>
-    
-    <div class="card">
+    <div class="card shots-card">
       <div class="shots">
-        <img src="screen1.png" alt="ParKar screenshot 1">
-        <img src="screen2.png" alt="ParKar screenshot 2">
-        <img src="screen3.png" alt="ParKar screenshot 3">
+        <img src="screen1.png" alt="ParKar screenshot 1" class="screenshot">
+        <img src="screen2.png" alt="ParKar screenshot 2" class="screenshot">
+        <img src="screen3.png" alt="ParKar screenshot 3" class="screenshot">
       </div>
       <p class="hint">App screenshots</p>
     </div>
   </section>
+
+  <section class="card info-card">
+    <h2>Why ParKar?</h2>
+    <div class="info-list">
+      <div><strong>Fast</strong><br>Save and find in two taps.</div>
+      <div><strong>Clear</strong><br>Notes and reminders for level, door or time.</div>
+      <div><strong>Private</strong><br>Data is stored on your device.</div>
+      <div><strong>Lightweight</strong><br>Low battery and storage usage.</div>
+    </div>
+  </section>
 </div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox hidden">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" alt="Expanded screenshot">
+</div>
+
+<script>
+  // Lightbox functionality
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+
+  document.querySelectorAll('.screenshot').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.remove('hidden');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.add('hidden');
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.add('hidden');
+    }
+  });
+</script>
 </body>
 </html>
